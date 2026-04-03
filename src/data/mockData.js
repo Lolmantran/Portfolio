@@ -77,14 +77,9 @@ export const projects = [
     year:        "2024",
     description:
       "Describe what the project does, the problem it solves, and the technical choices you made. Keep it to 2-3 sentences focused on impact. E.g. — a full-stack SaaS platform that automates invoice processing for SMBs, reducing manual data entry by 80%.",
-    stats: [
-      { value: "10K+", label: "Users"     },
-      { value: "99.9%", label: "Uptime"   },
-      { value: "80%",  label: "Time Saved" },
-    ],
     tags: ["React", "Node.js", "PostgreSQL", "Docker"],
     link:  "https://github.com/yourusername/project-one",
-    image: "",  // Optional: path to screenshot, e.g. '/images/project1.png'
+    images: ["", "", ""],  // Add up to 3 screenshot paths, e.g. '/images/project1a.png'
   },
   {
     id:          2,
@@ -95,14 +90,9 @@ export const projects = [
     year:        "2024",
     description:
       "Describe the second project. E.g. — an automated ETL pipeline that ingests 500K+ records daily from 5 external APIs into a Snowflake warehouse, powering live business dashboards.",
-    stats: [
-      { value: "500K+", label: "Records/day" },
-      { value: "5",    label: "Data Sources" },
-      { value: "3×",   label: "Faster Reports" },
-    ],
     tags: ["Python", "Airflow", "Snowflake", "dbt", "SQL"],
     link:  "https://github.com/yourusername/project-two",
-    image: "",  // Optional: path to screenshot, e.g. '/images/project2.png'
+    images: ["", "", ""],  // Add up to 3 screenshot paths, e.g. '/images/project2a.png'
   },
   {
     id:          3,
@@ -113,14 +103,9 @@ export const projects = [
     year:        "2025",
     description:
       "Describe your ML/AI project here. E.g. — a local RAG system for semantic Q&A over internal documents — fully private, no API calls, built with LangChain, FAISS, and Llama 3.",
-    stats: [
-      { value: "100%", label: "Local / Private" },
-      { value: "1.5K+", label: "Indexed Chunks" },
-      { value: "E2E",  label: "Pipeline"        },
-    ],
     tags: ["Python", "LangChain", "FAISS", "Ollama", "Docker"],
     link:  "https://github.com/yourusername/project-three",
-    image: "",  // Optional: path to screenshot, e.g. '/images/project3.png'
+    images: ["", "", ""],  // Add up to 3 screenshot paths, e.g. '/images/project3a.png'
   },
 ];
 

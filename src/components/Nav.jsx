@@ -37,7 +37,7 @@ export default function Nav() {
     .join('');
 
   return (
-    <nav className={`nav${scrolled ? ' nav--scrolled' : ''}`}>
+    <nav className={`nav${scrolled ? ' nav--scrolled' : ' nav--hidden'}`}>
       <div className="nav__inner">
         <ul className="nav__links">
           {NAV_LINKS.map(({ label, href }) => (
