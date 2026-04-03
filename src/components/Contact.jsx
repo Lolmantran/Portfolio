@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { personalInfo, contactInfo } from '../data/mockData';
-import SectionHeader from './SectionHeader';
 
 const INITIAL = { name: '', email: '', message: '' };
 
@@ -35,15 +34,15 @@ export default function Contact() {
   return (
     <section id="contact" className="section">
       <div className="container">
-        <SectionHeader
-          label="Contact"
-          title={contactInfo.heading}
-          subtitle={contactInfo.subheading}
-        />
-
         <div className="contact__inner">
-          {/* Left: info */}
+          {/* Left: heading + info */}
           <div className="contact__info">
+            <div className="contact__header">
+              <span className="section-label">Contact</span>
+              <h2 className="section-title">{contactInfo.heading}</h2>
+              <p className="section-subtitle">{contactInfo.subheading}</p>
+            </div>
+
             <span className="contact__availability">
               {contactInfo.availability}
             </span>
@@ -66,7 +65,7 @@ export default function Contact() {
               <a href={links.github}   target="_blank" rel="noreferrer" className="contact__social-link">GitHub</a>
               <a href={links.linkedin} target="_blank" rel="noreferrer" className="contact__social-link">LinkedIn</a>
               {links.cv && (
-                <a href={links.cv} target="_blank" rel="noreferrer" className="contact__social-link">Download CV</a>
+                <a href={links.cv} download className="contact__social-link">Download CV</a>
               )}
             </div>
           </div>

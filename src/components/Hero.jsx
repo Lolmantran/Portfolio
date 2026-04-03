@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { personalInfo } from '../data/mockData';
 import ParticleBg from './ParticleBg';
+import profilePhoto from '../assets/mypicture.jpg';
 
 export default function Hero({ appReady }) {
   const { name, tagline, description, roles, stats, links } = personalInfo;
@@ -75,9 +76,7 @@ export default function Hero({ appReady }) {
         <div className="hero__visual hero__reveal hero__reveal--7">
           <div className="hero__card glow-border">
             <div className="hero__profile-placeholder">
-              {/* Replace the src below with your actual photo path */}
-              {/* <img src="/profile.jpg" alt={name} /> */}
-              <span className="hero__profile-text">Your photo here</span>
+              <img src={profilePhoto} alt={name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
             </div>
             <div className="hero__tags">
               {personalInfo.roles.map(r => (

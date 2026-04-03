@@ -2,6 +2,28 @@
 //  MOCK DATA — edit this file to update your portfolio content
 // =============================================================
 
+// ─── Project images ──────────────────────────────────────────
+import VietLearnMain      from '../assets/VietLearn/Main.png';
+import VietLearnDash      from '../assets/VietLearn/Dashboard.png';
+import VietLearnF1        from '../assets/VietLearn/Feature1.png';
+import VietLearnF2        from '../assets/VietLearn/Feature2.png';
+import VietLearnF3        from '../assets/VietLearn/Feature3.png';
+
+import DoccatMain         from '../assets/Doccat/Main.png';
+import DoccatDash         from '../assets/Doccat/Dashboard.png';
+
+import GamehubMain        from '../assets/Gamehub/Main.png';
+import GamehubDash        from '../assets/Gamehub/Dashboard.png';
+import GamehubF1          from '../assets/Gamehub/Feature1.png';
+import GamehubF2          from '../assets/Gamehub/Feature2.png';
+import GamehubF3          from '../assets/Gamehub/Feature3.png';
+
+import AirBrbMain         from '../assets/AirBrb/Main.png';
+import AirBrbDash         from '../assets/AirBrb/Dashboard.png';
+import AirBrbF1           from '../assets/AirBrb/Feature1.png';
+import AirBrbF2           from '../assets/AirBrb/Feature2.png';
+import AirBrbF3           from '../assets/AirBrb/Feature3.png';
+
 // ─── Personal / Hero ──────────────────────────────────────────
 export const personalInfo = {
   name: "Kei Tran",
@@ -25,7 +47,7 @@ export const personalInfo = {
     github:   "https://github.com/Lolmantran",
     linkedin: "https://www.linkedin.com/in/nam-khanh-tran-26b543326/",
     email:    "Namkhanh.tran2310@gmail.com",
-    cv:       "/your-cv.pdf",
+    cv:       "/NamKhanhTranResume.pdf",
   },
 };
 
@@ -62,7 +84,7 @@ export const experiences = [
     endDate:     "May 2024",
     current:     false,
     description:
-    "Completed a 6-month bootcamp covering programming fundamentals, data structures & algorithms, and basic system design.",
+    "Completed a 6-month bootcamp covering programming fundamentals, data structures & algorithms using C++ language, and basic system design.",
   },
 ];
 
@@ -71,52 +93,78 @@ export const projects = [
   {
     id:          1,
     number:      "01",
-    category:    "WEB APPLICATION",
-    title:       "Project One Title",
-    subtitle:    "A short project subtitle or tech summary",
-    year:        "2024",
-    description:
-      "Describe what the project does, the problem it solves, and the technical choices you made. Keep it to 2-3 sentences focused on impact. E.g. — a full-stack SaaS platform that automates invoice processing for SMBs, reducing manual data entry by 80%.",
-    tags: ["React", "Node.js", "PostgreSQL", "Docker"],
-    link:  "https://github.com/yourusername/project-one",
-    images: ["", "", ""],  // Add up to 3 screenshot paths, e.g. '/images/project1a.png'
+    category:    "FULL STACK WEB APPLICATION - EDUCATION",
+    title:       "VietLearn",
+    subtitle:    "Learning Vietnamese with AI",
+    year:        "2025-2026",
+    description: "Developed a full-stack AI Vietnamese learning platform with a Next.js 16 (App Router) frontend and NestJS backend — featuring spaced-repetition flashcards, multiple-choice quizzes, OpenAI-powered AI tutor chat, real-time Recharts dashboard with XP/streak gamification, and Google OAuth authentication via NextAuth v5 with server-side protected routing middleware",
+    tags: ["Next.js", "Nest.js","Typescript", "PostgreSQL", "Docker", "Tailwind", "Prisma", "Vercel", "Railway", "OpenAI API"],
+    link:  "https://vietlearn-frontend.vercel.app/",
+    images: [VietLearnMain, VietLearnDash, VietLearnF1, VietLearnF2, VietLearnF3],
   },
   {
     id:          2,
     number:      "02",
-    category:    "DATA ENGINEERING",
-    title:       "Project Two Title",
-    subtitle:    "Another subtitle here",
-    year:        "2024",
+    category:    "FULL STACK WEB APPLICATION - HEALTHCARE",
+    title:       "Doc Cat Portal",
+    subtitle:    "Healthcare service support doctors",
+    year:        "2025-2026",
     description:
       "Describe the second project. E.g. — an automated ETL pipeline that ingests 500K+ records daily from 5 external APIs into a Snowflake warehouse, powering live business dashboards.",
-    tags: ["Python", "Airflow", "Snowflake", "dbt", "SQL"],
-    link:  "https://github.com/yourusername/project-two",
-    images: ["", "", ""],  // Add up to 3 screenshot paths, e.g. '/images/project2a.png'
+    tags: ["AWS", "Next.js", "Typescript", "FastAPI", "Python", "PostgreSQL", "OpenAI API", "Material UI"],
+    link:  "https://doc-cat-agent.web.app/",
+    images: [DoccatMain, DoccatDash, "", "", ""],  // Feature1-3 coming soon
   },
   {
     id:          3,
     number:      "03",
-    category:    "AI / MACHINE LEARNING",
-    title:       "Project Three Title",
-    subtitle:    "ML system or AI project",
+    category:    "Frontend React",
+    title:       "Gamehub",
+    subtitle:    "Frontend React Game",
     year:        "2025",
     description:
-      "Describe your ML/AI project here. E.g. — a local RAG system for semantic Q&A over internal documents — fully private, no API calls, built with LangChain, FAISS, and Llama 3.",
-    tags: ["Python", "LangChain", "FAISS", "Ollama", "Docker"],
-    link:  "https://github.com/yourusername/project-three",
-    images: ["", "", ""],  // Add up to 3 screenshot paths, e.g. '/images/project3a.png'
+      "GameHub is a collection of timeless games you grew up playing — reimagined in the browser with no downloads, no accounts, and no backend required. Every game runs entirely on the client side. A built-in score system tracks your wins across all games, so your progress persists between sessions.",
+    tags: ["React", "Redux", "Tailwind", "React Router", "Javascript"],
+    link:  "https://lolmantran.github.io/Frontend-Game/",
+    images: [GamehubMain, GamehubDash, GamehubF1, GamehubF2, GamehubF3],
+  },
+  {
+    id:          4,
+    number:      "04",
+    category:    "FULL STACK WEB APPLICATION- ECOMMERCE",
+    title:       "AirBrb",
+    subtitle:    "ECOMMERCE website connect host and customer for AirBnB",
+    year:        "2025",
+    description:
+      "AirBrB — a simplified Airbnb-like property rental platform. It allows hosts to create, edit, publish, and manage property listings, and lets guests browse listings, make bookings, leave reviews, and filter by amenities, price, and ratings.",
+    tags: ["React.js", "TypeScript", "Express.js", "MongoDB"],
+    link:  "https://github.com/Lolmantran/airbrb",
+    images: [AirBrbMain, AirBrbDash, AirBrbF1, AirBrbF2, AirBrbF3],
   },
 ];
 
 // ─── Tech Stack (Tech Forge) ──────────────────────────────────
-// Edit this list to add / remove tools. Order matters — left to right, top to bottom.
-export const techStack = [
-  "Python", "R", "JavaScript", "TypeScript", "SQL",
-  "React", "Next.js", "Tailwind CSS", "Node.js", "Express",
-  "PostgreSQL", "MySQL", "MongoDB", "Snowflake",
-  "Pandas", "NumPy", "PyTorch", "TensorFlow", "Airflow", "dbt",
-  "Docker", "Git", "GitHub", "VS Code", "Vite",
+export const techCategories = [
+  {
+    label: "Languages",
+    items: ["JavaScript", "TypeScript", "Python", "Java", "C / C++", "Assembly"],
+  },
+  {
+    label: "Frontend & Frameworks",
+    items: ["React", "Next.js", "Redux", "Material UI", "Tailwind", "Bootstrap"],
+  },
+  {
+    label: "Backend & Infrastructure",
+    items: ["NestJS", "ExpressJS", "Node.js", "Java Spring", "AWS", "Docker"],
+  },
+  {
+    label: "Databases",
+    items: ["PostgreSQL", "MongoDB", "Redis"],
+  },
+  {
+    label: "AI & Automation",
+    items: ["TensorFlow", "NumPy", "OpenCV", "Claude Code", "GitHub Copilot"],
+  },
 ];
 
 // ─── Contact ──────────────────────────────────────────────────
