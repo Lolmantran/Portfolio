@@ -39,7 +39,6 @@ export default function Hero({ appReady }) {
 
         {/* ── Left column ───────────────────────── */}
         <div className="hero__content">
-          <p className="hero__eyebrow hero__reveal hero__reveal--1">Portfolio</p>
 
           <h1 className="hero__name hero__reveal hero__reveal--2">{name}</h1>
 

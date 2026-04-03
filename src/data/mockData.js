@@ -4,7 +4,7 @@
 
 // ─── Personal / Hero ──────────────────────────────────────────
 export const personalInfo = {
-  name: "Nam Khanh Tran",
+  name: "Kei Tran",
   tagline: "I build things that matter.",
   description:
     "Second-year Computer Science student at UNSW. Full-stack software engineer, AWS Certified Solutions Architect, and AI enthusiast. Actively seeking opportunities — feel free to reach out!",
@@ -15,8 +15,8 @@ export const personalInfo = {
 
   // Hero stats row
   stats: [
-    { value: "3+",  label: "Years Experience" },
-    { value: "20+", label: "Projects Built"   },
+    { value: "1+",  label: "Years Experience" },
+    { value: "5+", label: "Projects Built"   },
     { value: "10+", label: "Technologies"     },
   ],
 
@@ -40,18 +40,18 @@ export const experiences = [
     endDate:     "Present",
     current:     true,
     description:
-      "Describe your most impactful role here. Focus on quantified outcomes: what you built, what improved, and by how much. E.g. — architected a new microservices platform that reduced deployment time by 60% and supported 2× traffic growth.",
+      "Built a Queue Management System (QMS) module from scratch within a 5-year-old legacy microservice architecture with a team of 5. Designed the full flow for hospital patient registration, personal details, and symptom intake. Implemented drag-and-drop queue management for doctors to organize patients into appropriate rooms and monitor real-time patient location across service rooms. Developed RESTful APIs, designed the database schema, and implemented WebSocket for real-time queue updates. Worked directly with a Solution Architect to architect the module from the ground up. Currently deployed in 2 hospitals in Malaysia. Also contributed to an AI healthcare system where symptom input assists doctors with diagnoses, plus prescription templates for respective diseases.\nCollaborated with a team of 5 to build a full-stack AI-powered clinical documentation platform using Next.js 15 and TypeScript with HIPAA-aligned security (AES-256 encryption, audit logging). Implemented JWT and OAuth 2.0 (Google, Facebook, X/Twitter) with role-based access control. Engineered an end-to-end AI ingestion pipeline: clinical document upload → AWS Textract OCR → RAG chunking/vectorization → LLM-generated answers with citations. Automated identity document processing with AWS Textract for field extraction (name, DOB, document number, expiration). Integrated AI agents for symptom-based diagnosis, clinical note extraction, and prescription templates. Added multi-language support via next-intl (i18n) for international deployment.",
   },
   {
     id: 2,
     title:       "Full Stack Software Engineer",
     company:     "Apus Web",
     type:        "Part-time",
-    startDate:   "Mar 2022",
-    endDate:     "Dec 2023",
+    startDate:   "May 2024",
+    endDate:     "Dec 2024",
     current:     false,
     description:
-      "Describe your contributions here. E.g. — led a team of 4 to deliver a real-time analytics dashboard used by 500+ internal users, cutting manual reporting effort by 70%.",
+      "Gained hands-on experience in full-stack development within an outsourcing company. Developed frontend features for an e-commerce platform (100+ users), including login and JWT authentication, and optimized UX to enhance overall user experience. Collaborated on real client projects across frontend, backend, and database systems.",
   },
   {
     id: 3,

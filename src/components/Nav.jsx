@@ -39,7 +39,6 @@ export default function Nav() {
   return (
     <nav className={`nav${scrolled ? ' nav--scrolled' : ''}`}>
       <div className="nav__inner">
-        <a href="#main" className="nav__logo">{initials}</a>
         <ul className="nav__links">
           {NAV_LINKS.map(({ label, href }) => (
             <li key={href}>
