@@ -22,7 +22,6 @@ export default function Experience() {
         <SectionHeader
           label="Career"
           title="My Experience"
-          subtitle="Roles I have held and the impact I made along the way."
         />
 
         <div className="timeline">

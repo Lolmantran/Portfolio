@@ -52,7 +52,6 @@ export default function Skills() {
         <SectionHeader
           label="Stack"
           title="The Tech Forge"
-          subtitle="The stack behind the work. The tools I learned along the journey."
         />
 
         <div className="forge__categories">

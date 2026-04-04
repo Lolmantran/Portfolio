@@ -132,7 +132,6 @@ export default function Projects() {
         <SectionHeader
           label="Work"
           title="Projects"
-          subtitle="Things I have built. Problems I chose to solve."
         />
         <div className="projects__grid">
           {projects.map(project => (
