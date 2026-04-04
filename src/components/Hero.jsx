@@ -8,6 +8,19 @@ export default function Hero({ appReady }) {
 
   const [roleIndex, setRoleIndex] = useState(0);
   const [animate, setAnimate]     = useState('fade-in');
+  const [revealed, setRevealed]   = useState(false);
+
+  // Always animate in regardless of whether appReady starts true or becomes true.
+  // Double-RAF ensures the initial opacity:0 state is painted before the
+  // CSS transition fires, so the staggered reveal plays on every page load.
+  useEffect(() => {
+    if (!appReady) return;
+    let f1, f2;
+    f1 = requestAnimationFrame(() => {
+      f2 = requestAnimationFrame(() => setRevealed(true));
+    });
+    return () => { cancelAnimationFrame(f1); cancelAnimationFrame(f2); };
+  }, [appReady]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,7 +34,7 @@ export default function Hero({ appReady }) {
   }, [roles.length]);
 
   return (
-    <section id="main" className={`hero${appReady ? ' hero--ready' : ''}`}>
+    <section id="main" className={`hero${revealed ? ' hero--ready' : ''}`}>
       {/* Particle network canvas */}
       <ParticleBg />
 

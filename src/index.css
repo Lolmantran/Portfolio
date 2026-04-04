@@ -732,8 +732,19 @@ button { cursor: pointer; font-family: inherit; }
   font-size: 15px;
   line-height: 1.72;
   color: var(--text-muted);
-  white-space: pre-line;
+  margin-bottom: 8px;
 }
+.timeline__description:last-child { margin-bottom: 0; }
+.timeline__section-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin: 16px 0 6px;
+}
+.timeline__section-label:first-child { margin-top: 4px; }
 @media (max-width: 640px) {
   .timeline__item {
     grid-template-columns: 24px 1fr;

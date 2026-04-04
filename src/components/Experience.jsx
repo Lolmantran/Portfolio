@@ -1,6 +1,20 @@
 import { experiences } from '../data/mockData';
 import SectionHeader from './SectionHeader';
 
+// Renders **bold** markers, \n paragraph breaks, and ## section headers
+function renderDescription(raw) {
+  return raw.split('\n').map((paragraph, pi) => {
+    if (paragraph.startsWith('## ')) {
+      return <div key={pi} className="timeline__section-label">{paragraph.slice(3)}</div>;
+    }
+    const parts = paragraph.split(/\*\*(.*?)\*\*/g);
+    const nodes = parts.map((part, i) =>
+      i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+    );
+    return <p key={pi} className="timeline__description">{nodes}</p>;
+  });
+}
+
 export default function Experience() {
   return (
     <section id="experience" className="section experience">
@@ -25,7 +39,7 @@ export default function Experience() {
                     <span className="timeline__current">Present</span>
                   )}
                 </div>
-                <p className="timeline__description">{exp.description}</p>
+                {renderDescription(exp.description)}
               </div>
 
               {/* Center: dot + connecting line */}

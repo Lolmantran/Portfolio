@@ -11,21 +11,23 @@ import Footer       from './components/Footer'
 import DraggableFAB from './components/DraggableFAB'
 
 export default function App() {
-  const [appReady, setAppReady] = useState(
-    () => Boolean(sessionStorage.getItem('intro-shown'))
-  );
+  const alreadySeen = Boolean(sessionStorage.getItem('intro-shown'));
+  const [showIntro, setShowIntro] = useState(!alreadySeen);
+  const [heroReady, setHeroReady] = useState(alreadySeen);
+
+  const handleIntroLeaving = () => setHeroReady(true);
 
   const handleIntroDone = () => {
     sessionStorage.setItem('intro-shown', '1');
-    setAppReady(true);
+    setShowIntro(false);
   };
 
   return (
     <>
-      {!appReady && <Intro onDone={handleIntroDone} />}
+      {showIntro && <Intro onLeaving={handleIntroLeaving} onDone={handleIntroDone} />}
       <Nav />
       <main>
-        <Hero appReady={appReady} />
+        <Hero appReady={heroReady} />
         <Experience />
         <Projects />
         <Skills />

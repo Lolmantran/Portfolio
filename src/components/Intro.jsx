@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { personalInfo } from '../data/mockData';
 
-export default function Intro({ onDone }) {
+export default function Intro({ onDone, onLeaving }) {
   const [leaving, setLeaving] = useState(false);
 
   const initials = personalInfo.name
@@ -10,10 +10,13 @@ export default function Intro({ onDone }) {
     .join('');
 
   useEffect(() => {
-    const t1 = setTimeout(() => setLeaving(true), 2800);
+    const t1 = setTimeout(() => {
+      setLeaving(true);
+      onLeaving?.();
+    }, 2800);
     const t2 = setTimeout(() => onDone?.(), 3750);
     return () => { clearTimeout(t1); clearTimeout(t2); };
-  }, [onDone]);
+  }, [onDone, onLeaving]);
 
   return (
     <div className={`intro${leaving ? ' intro--leaving' : ''}`} aria-hidden="true">
