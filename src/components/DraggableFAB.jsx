@@ -7,7 +7,8 @@ const ACTIONS = [
   { key: 'github',   Icon: SiGithub,      label: 'GitHub',   color: '#181717', getHref: l => l.github,              target: '_blank' },
   { key: 'linkedin', Icon: FaLinkedinIn,  label: 'LinkedIn', color: '#0A66C2', getHref: l => l.linkedin,            target: '_blank' },
   { key: 'email',    Icon: FaEnvelope,    label: 'Email',    color: '#0048C8', getHref: l => `mailto:${l.email}`,   target: undefined },
-  { key: 'cv',       Icon: FaFilePdf,     label: 'CV',       color: '#DC2626', getHref: l => l.cv,                  target: undefined, download: true  },
+  { key: 'cv',         Icon: FaFilePdf,     label: 'CV',         color: '#DC2626', getHref: l => l.cv,         target: undefined, download: true },
+  { key: 'transcript', Icon: FaFilePdf,     label: 'Transcript', color: '#7C3AED', getHref: l => l.transcript, target: undefined, download: true },
 ];
 
 export default function DraggableFAB() {

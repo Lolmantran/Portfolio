@@ -82,6 +82,9 @@ export default function Hero({ appReady }) {
             {links.cv && (
               <a href={links.cv} target="_blank" rel="noreferrer" className="btn btn--ghost">CV</a>
             )}
+            {links.transcript && (
+              <a href={links.transcript} download className="btn btn--ghost">Transcript</a>
+            )}
           </div>
         </div>
 

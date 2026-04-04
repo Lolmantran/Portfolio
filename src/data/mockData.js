@@ -5,6 +5,7 @@
 // ─── Project images ──────────────────────────────────────────
 import VietLearnMain      from '../assets/VietLearn/Main.png';
 import cvFile             from '../assets/NamKhanhTranResume.pdf';
+import transcriptFile     from '../assets/statement.pdf';
 import VietLearnDash      from '../assets/VietLearn/Dashboard.png';
 import VietLearnF1        from '../assets/VietLearn/Feature1.png';
 import VietLearnF2        from '../assets/VietLearn/Feature2.png';
@@ -48,7 +49,8 @@ export const personalInfo = {
     github:   "https://github.com/Lolmantran",
     linkedin: "https://www.linkedin.com/in/nam-khanh-tran-26b543326/",
     email:    "Namkhanh.tran2310@gmail.com",
-    cv:       cvFile,
+    cv:         cvFile,
+    transcript: transcriptFile,
   },
 };
 
