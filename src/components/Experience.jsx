@@ -48,7 +48,7 @@ export default function Experience() {
 
               {/* Right: date range */}
               <div className="timeline__dates">
-                {exp.startDate} &mdash; {exp.current ? 'Present' : exp.endDate}
+                {exp.startDate} - {exp.current ? 'Present' : exp.endDate}
               </div>
 
             </div>

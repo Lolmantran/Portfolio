@@ -13,6 +13,9 @@ import VietLearnF3        from '../assets/VietLearn/Feature3.png';
 
 import DoccatMain         from '../assets/Doccat/Main.png';
 import DoccatDash         from '../assets/Doccat/Dashboard.png';
+import DoccatF1           from '../assets/Doccat/Feature1.png';
+import DoccatF2           from '../assets/Doccat/Feature2.png';
+import DoccatF3           from '../assets/Doccat/Feature3.png';
 
 import GamehubMain        from '../assets/Gamehub/Main.png';
 import GamehubDash        from '../assets/Gamehub/Dashboard.png';
@@ -31,8 +34,8 @@ export const personalInfo = {
   name: "Kei Tran",
   tagline: "I build things that matter.",
   description:
-    "Second-year Computer Science student at UNSW. Full-stack software engineer, AWS Certified Solutions Architect, and AI enthusiast. Actively seeking opportunities — feel free to reach out!",
-  location: "Sydney, Austrlia",
+    "Second-year Computer Science student at UNSW. Full-stack software engineer, AWS Certified Solutions Architect, and AI enthusiast. Actively seeking opportunities, so feel free to reach out!",
+  location: "Sydney, Australia",
 
   // Roles that cycle in the hero section
   roles: ["Software Engineer","AWS Certified Solution Architect", "Cloud Engineer", "AI Engineer", "Full-Stack Developer",],
@@ -58,17 +61,28 @@ export const personalInfo = {
 export const experiences = [
   {
     id: 1,
+    title:       "Software Engineer (Research Scholarship)",
+    company:     "UNSW Taste of Research",
+    type:        "Research Scholarship",
+    startDate:   "Jun 2026",
+    endDate:     "Present",
+    current:     true,
+    description:
+      "Engineered a **modular image-transmission pipeline** (**JPEG** → **bit-stream packing** → **BPSK modulation** → **AWGN channel** → **decode**) with **configurable quality and noise parameters** for fully reproducible runs.\nBuilt an **automated benchmarking harness** comparing four reconstruction methods (**JPEG baseline**, **SRCNN**, **Cycle-CNN**, **Deep JSCC**) across a full noise sweep, auto-generating **PSNR comparison charts** and metrics.\nRefactored an ad-hoc codebase into **reusable, well-structured modules** and a **self-contained pipeline**, cutting a full experiment re-run from many manual steps down to a **single command**.",
+  },
+  {
+    id: 2,
     title:       "Software Engineer Intern",
     company:     "FPT Software - Global Healthcare Facility",
     type:        "Full-time/Internship",
-    startDate:   "Dec 2025",
-    endDate:     "Present",
-    current:     true,
+    startDate:   "Nov 2025",
+    endDate:     "Apr 2026",
+    current:     false,
     description:
       "## Queue Management System (QMS)\nBuilt a **QMS module from scratch** within a **5-year-old legacy microservice architecture** with a **team of 5**, working directly with a **Solution Architect** to design the module end-to-end. Currently **deployed in 2 hospitals in Malaysia**.\nDesigned the full patient flow covering **hospital registration**, **personal details collection**, and **symptom intake**. Implemented **drag-and-drop queue management** for doctors to organise patients into appropriate rooms and **monitor real-time patient location** across service rooms.\nDeveloped **RESTful APIs**, designed the **database schema**, and implemented **WebSocket** for real-time queue updates. Also contributed to an **AI healthcare system** where **symptom input** assists doctors with diagnoses, plus **prescription templates** for respective diseases.\n## AI Clinical Documentation Platform\nCollaborated with a **team of 5** to build a **full-stack AI-powered clinical documentation platform** using **Next.js 15** and **TypeScript** with **HIPAA-aligned security** (**AES-256 encryption**, audit logging).\nImplemented **JWT** and **OAuth 2.0** (Google, Facebook, X/Twitter) with **role-based access control**. Engineered an end-to-end **AI ingestion pipeline**: clinical document upload → **AWS Textract OCR** → **RAG chunking/vectorization** → **LLM-generated answers** with citations.\nAutomated identity document processing with **AWS Textract** for field extraction (name, DOB, document number, expiration). Integrated **AI agents** for symptom-based diagnosis, **clinical note extraction**, and **prescription templates**. Added **multi-language support** via **next-intl (i18n)** for international deployment.",
   },
   {
-    id: 2,
+    id: 3,
     title:       "Full Stack Software Engineer",
     company:     "Apus Web",
     type:        "Part-time",
@@ -79,7 +93,7 @@ export const experiences = [
       "Built a **full-stack e-commerce application** in **React.js**, meeting company quality standards, covering **product listing**, **cart**, and **checkout flows**. Developed **RESTful APIs** with **Node.js** and **MongoDB**, handling **data modelling** and **CRUD operations** for the full product lifecycle. Enhanced **authentication security** on a live client project by implementing **JWT-based login**, receiving and incorporating direct client feedback. Gained hands-on experience with frontend fundamentals including **HTML**, **CSS**, and **Bootstrap** in a **production outsourcing environment**.",
   },
   {
-    id: 3,
+    id: 4,
     title:       "Software Engineering Bootcamp Trainee",
     company:     "Samsung Innovation Campus",
     type:        "Bootcamp",
@@ -100,7 +114,7 @@ export const projects = [
     title:       "VietLearn",
     subtitle:    "Learning Vietnamese with AI",
     year:        "2025-2026",
-    description: "Developed a full-stack AI Vietnamese learning platform with a Next.js 16 (App Router) frontend and NestJS backend — featuring spaced-repetition flashcards, multiple-choice quizzes, OpenAI-powered AI tutor chat, real-time Recharts dashboard with XP/streak gamification, and Google OAuth authentication via NextAuth v5 with server-side protected routing middleware",
+    description: "Developed a full-stack AI Vietnamese learning platform with a Next.js 16 (App Router) frontend and NestJS backend, featuring spaced-repetition flashcards, multiple-choice quizzes, OpenAI-powered AI tutor chat, real-time Recharts dashboard with XP/streak gamification, and Google OAuth authentication via NextAuth v5 with server-side protected routing middleware",
     tags: ["Next.js", "Nest.js","Typescript", "PostgreSQL", "Docker", "Tailwind", "Prisma", "Vercel", "Railway", "OpenAI API"],
     link:  "https://vietlearn-frontend.vercel.app/",
     images: [VietLearnMain, VietLearnDash, VietLearnF1, VietLearnF2, VietLearnF3],
@@ -113,10 +127,10 @@ export const projects = [
     subtitle:    "Healthcare service support doctors",
     year:        "2025-2026",
     description:
-      "DocCat is a web platform built to help healthcare teams spend less time on paperwork and more time on patients. Instead of manually writing and organising clinical notes, doctors and staff can upload documents and let the AI automatically extract key information, answer questions based on the content, and generate summaries — all with source references so clinicians can trust the output.",
+      "DocCat is a web platform built to help healthcare teams spend less time on paperwork and more time on patients. Instead of manually writing and organising clinical notes, doctors and staff can upload documents and let the AI automatically extract key information, answer questions based on the content, and generate summaries, all with source references so clinicians can trust the output.",
     tags: ["AWS", "Next.js", "Typescript", "FastAPI", "Python", "PostgreSQL", "OpenAI API", "Material UI"],
-    link:  "https://doc-cat-agent.web.app/",
-    images: [DoccatMain, DoccatDash, "", "", ""],  // Feature1-3 coming soon
+    link:  "https://doccat-portal.web.app/",
+    images: [DoccatMain, DoccatDash, DoccatF1, DoccatF2, DoccatF3],
   },
   {
     id:          3,
@@ -126,7 +140,7 @@ export const projects = [
     subtitle:    "Frontend React Game",
     year:        "2025",
     description:
-      "GameHub is a collection of timeless games you grew up playing — reimagined in the browser with no downloads, no accounts, and no backend required. Every game runs entirely on the client side. A built-in score system tracks your wins across all games, so your progress persists between sessions.",
+      "GameHub is a collection of timeless games you grew up playing, reimagined in the browser with no downloads, no accounts, and no backend required. Every game runs entirely on the client side. A built-in score system tracks your wins across all games, so your progress persists between sessions.",
     tags: ["React", "Redux", "Tailwind", "React Router", "Javascript"],
     link:  "https://lolmantran.github.io/Frontend-Game/",
     images: [GamehubMain, GamehubDash, GamehubF1, GamehubF2, GamehubF3],
@@ -139,7 +153,7 @@ export const projects = [
     subtitle:    "ECOMMERCE website connect host and customer for AirBnB",
     year:        "2025",
     description:
-      "AirBrB — a simplified Airbnb-like property rental platform. It allows hosts to create, edit, publish, and manage property listings, and lets guests browse listings, make bookings, leave reviews, and filter by amenities, price, and ratings.",
+      "AirBrB is a simplified Airbnb-like property rental platform. It allows hosts to create, edit, publish, and manage property listings, and lets guests browse listings, make bookings, leave reviews, and filter by amenities, price, and ratings.",
     tags: ["React.js", "TypeScript", "Express.js", "MongoDB"],
     link:  "https://github.com/Lolmantran/airbrb",
     images: [AirBrbMain, AirBrbDash, AirBrbF1, AirBrbF2, AirBrbF3],

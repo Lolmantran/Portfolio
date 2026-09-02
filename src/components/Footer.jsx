@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <p className="footer__copy">
-        Designed and built by {name} &mdash; &copy; {year}
+        Designed and built by {name} &middot; &copy; {year}
       </p>
     </footer>
   );
